@@ -1,2 +1,17 @@
-package com.am.projectmanagement.service;public interface StatisticsService {
+package com.am.projectmanagement.service;
+
+import com.am.projectmanagement.model.Player;
+import com.am.projectmanagement.model.Statistics;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface StatisticsService {
+    Optional<Statistics> getStatistics(Integer statisticsId);
+    Statistics addStatistics (Statistics statistics);
+    void deleteStatistics (Integer statisticsId);
+    List<Statistics> getStatistics();
+    List<Statistics> getPlayerStatistics(Player player);
+    Statistics updateStatistics(Statistics statistics);
+    void setStatistics(Player player, Statistics statistics);
 }
