@@ -53,13 +53,13 @@ public class PlayerServiceImpl implements PlayerService{
         updatePlayer.setStatistics(player.getStatistics());
         updatePlayer.setSurname(player.getSurname());
         updatePlayer.setStatistics(player.getStatistics());
-        updatePlayer.setTeams(player.getTeams());
+        updatePlayer.setTeam(player.getTeam());
         return playerRepository.save(updatePlayer);
     }
 
     @Override
     public void setTeam(Player player, Team team) {
-        player.setTeams(team);
+        player.setTeam(team);
         playerRepository.save(player);
     }
 }
