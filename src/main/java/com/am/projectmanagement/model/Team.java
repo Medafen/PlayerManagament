@@ -3,7 +3,7 @@ package com.am.projectmanagement.model;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity(name = "Teams")
+@Entity
 public class Team {
 
     @Id

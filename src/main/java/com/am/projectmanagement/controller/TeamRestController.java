@@ -12,8 +12,11 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
+@RestController
+@RequestMapping("/api")
 public class TeamRestController {
     private TeamService teamService;
+
     @Autowired
     public TeamRestController(TeamService teamService){
         this.teamService = teamService;

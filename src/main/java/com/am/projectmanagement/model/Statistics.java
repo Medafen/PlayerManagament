@@ -2,7 +2,7 @@ package com.am.projectmanagement.model;
 
 import javax.persistence.*;
 
-@Entity(name = "Statistics")
+@Entity
 public class Statistics {
 
     @Id
