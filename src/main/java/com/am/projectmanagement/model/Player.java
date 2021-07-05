@@ -84,6 +84,13 @@ public class Player {
         this.statistics = statistics;
     }
 
+//    public Team getTeams() {
+//        return team;
+//    }
+//
+//    public void setTeams(Team team) {
+//        this.team = team;
+//    }
 
     public Team getTeam() {
         return team;

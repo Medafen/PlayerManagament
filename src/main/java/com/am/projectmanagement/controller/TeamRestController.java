@@ -25,7 +25,7 @@ public class TeamRestController {
     ResponseEntity<Team> getTeam(@PathVariable Integer teamId) {
         return ResponseEntity.of(teamService.getTeam(teamId));
     }
-    @PostMapping(path = "/team")
+    @PostMapping(path = "/teams")
     ResponseEntity<Void> createTeam(@Valid @RequestBody Team team) {
 
         Team createdTeam = teamService.addTeam(team);
