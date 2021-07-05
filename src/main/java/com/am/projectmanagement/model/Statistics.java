@@ -88,4 +88,5 @@ public class Statistics {
     public void setPlayer(Player player) {
         this.player = player;
     }
+
 }

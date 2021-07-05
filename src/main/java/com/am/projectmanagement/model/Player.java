@@ -84,11 +84,12 @@ public class Player {
         this.statistics = statistics;
     }
 
-    public Team getTeams() {
+
+    public Team getTeam() {
         return team;
     }
 
-    public void setTeams(Team team) {
+    public void setTeam(Team team) {
         this.team = team;
     }
 }

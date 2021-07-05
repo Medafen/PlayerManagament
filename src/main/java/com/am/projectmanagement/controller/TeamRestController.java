@@ -25,7 +25,7 @@ public class TeamRestController {
     ResponseEntity<Team> getTeam(@PathVariable Integer teamId) {
         return ResponseEntity.of(teamService.getTeam(teamId));
     }
-    @PostMapping(path = "/teams")
+    @PostMapping(path = "/team")
     ResponseEntity<Void> createTeam(@Valid @RequestBody Team team) {
 
         Team createdTeam = teamService.addTeam(team);
@@ -43,7 +43,7 @@ public class TeamRestController {
                 })
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
-    @DeleteMapping("/teamsTeam/{teamId}")
+    @DeleteMapping("/deleteTeam/{teamId}")
     public ResponseEntity<Void> deleteTeam(@PathVariable Integer teamId) {
         return teamService.getTeam(teamId).map(p -> {
             teamService.deleteTeam(teamId);
