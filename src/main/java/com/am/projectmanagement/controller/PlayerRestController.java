@@ -20,10 +20,12 @@ public class PlayerRestController {
     public PlayerRestController(PlayerService playerService){
         this.playerService = playerService;
     }
+
     @GetMapping("/players/{playerId}")
     ResponseEntity<Player> getPlayer(@PathVariable Integer playerId) {
         return ResponseEntity.of(playerService.getPlayer(playerId));
     }
+
     @PostMapping(path = "/addPlayer")
     ResponseEntity<Void> createPlayer(@Valid @RequestBody Player player) {
 
@@ -32,6 +34,7 @@ public class PlayerRestController {
                 .path("/{playerId}").buildAndExpand(createdPlayer.getPlayerId()).toUri();
         return ResponseEntity.created(location).build();
     }
+
     @PutMapping("/updatePlayer/{playerId}")
     public ResponseEntity<Void> updatePlayer(@Valid @RequestBody Player player,
                                              @PathVariable Integer playerId) {
@@ -43,7 +46,6 @@ public class PlayerRestController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-
     @DeleteMapping("/deletePlayer/{playerId}")
     public ResponseEntity<Void> deletePlayer(@PathVariable Integer playerId) {
         return playerService.getPlayer(playerId).map(p -> {
@@ -51,6 +53,7 @@ public class PlayerRestController {
             return new ResponseEntity<Void>(HttpStatus.OK); // 200
         }).orElseGet(() -> ResponseEntity.notFound().build()); // 404 - Not found
     }
+
     @GetMapping(value = "/players")
     List<Player> getPlayers() { // @RequestHeader HttpHeaders headers � je�eli potrzebny
         return playerService.getPlayers(); // by�by nag��wek, wystarczy doda� drug� zmienn� z adnotacj�

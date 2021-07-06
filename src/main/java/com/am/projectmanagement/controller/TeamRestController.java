@@ -13,7 +13,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/apiTeams")
 public class TeamRestController {
     private TeamService teamService;
 
@@ -21,10 +21,12 @@ public class TeamRestController {
     public TeamRestController(TeamService teamService){
         this.teamService = teamService;
     }
+
     @GetMapping("/teams/{teamId}")
     ResponseEntity<Team> getTeam(@PathVariable Integer teamId) {
         return ResponseEntity.of(teamService.getTeam(teamId));
     }
+
     @PostMapping(path = "/addTeam")
     ResponseEntity<Void> createTeam(@Valid @RequestBody Team team) {
 
@@ -33,6 +35,7 @@ public class TeamRestController {
                 .path("/{teamId}").buildAndExpand(createdTeam.getTeamId()).toUri();
         return ResponseEntity.created(location).build();
     }
+
     @PutMapping("/updateTeam/{teamId}")
     public ResponseEntity<Void> updateTeam(@Valid @RequestBody Team team,
                                            @PathVariable Integer teamId) {
@@ -43,6 +46,7 @@ public class TeamRestController {
                 })
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
+
     @DeleteMapping("/deleteTeam/{teamId}")
     public ResponseEntity<Void> deleteTeam(@PathVariable Integer teamId) {
         return teamService.getTeam(teamId).map(p -> {
@@ -50,6 +54,7 @@ public class TeamRestController {
             return new ResponseEntity<Void>(HttpStatus.OK); // 200
         }).orElseGet(() -> ResponseEntity.notFound().build()); // 404 - Not found
     }
+
     @GetMapping(value = "/teams")
     List<Team> getTeams() { // @RequestHeader HttpHeaders headers � je�eli potrzebny
         return teamService.getTeams(); // by�by nag��wek, wystarczy doda� drug� zmienn� z adnotacj�
