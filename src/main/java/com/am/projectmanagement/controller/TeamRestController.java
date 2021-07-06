@@ -25,7 +25,7 @@ public class TeamRestController {
     ResponseEntity<Team> getTeam(@PathVariable Integer teamId) {
         return ResponseEntity.of(teamService.getTeam(teamId));
     }
-    @PostMapping(path = "/teams")
+    @PostMapping(path = "/addTeam")
     ResponseEntity<Void> createTeam(@Valid @RequestBody Team team) {
 
         Team createdTeam = teamService.addTeam(team);
@@ -33,7 +33,7 @@ public class TeamRestController {
                 .path("/{teamId}").buildAndExpand(createdTeam.getTeamId()).toUri();
         return ResponseEntity.created(location).build();
     }
-    @PutMapping("/team/{teamId}")
+    @PutMapping("/updateTeam/{teamId}")
     public ResponseEntity<Void> updateTeam(@Valid @RequestBody Team team,
                                            @PathVariable Integer teamId) {
         return teamService.getTeam(teamId)

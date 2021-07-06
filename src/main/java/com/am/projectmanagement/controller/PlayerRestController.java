@@ -32,7 +32,7 @@ public class PlayerRestController {
                 .path("/{playerId}").buildAndExpand(createdPlayer.getPlayerId()).toUri();
         return ResponseEntity.created(location).build();
     }
-    @PutMapping("/players/{playerId}")
+    @PutMapping("/updatePlayer/{playerId}")
     public ResponseEntity<Void> updatePlayer(@Valid @RequestBody Player player,
                                              @PathVariable Integer playerId) {
         return playerService.getPlayer(playerId)
@@ -44,7 +44,7 @@ public class PlayerRestController {
     }
 
 
-    @DeleteMapping("/playersPlayer/{playerId}")
+    @DeleteMapping("/deletePlayer/{playerId}")
     public ResponseEntity<Void> deletePlayer(@PathVariable Integer playerId) {
         return playerService.getPlayer(playerId).map(p -> {
             playerService.deletePlayer(playerId);
