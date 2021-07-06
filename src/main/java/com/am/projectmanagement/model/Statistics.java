@@ -3,6 +3,7 @@ package com.am.projectmanagement.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "statistics")
 public class Statistics {
 
     @Id
