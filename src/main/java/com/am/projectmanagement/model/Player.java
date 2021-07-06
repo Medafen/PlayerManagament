@@ -2,6 +2,7 @@ package com.am.projectmanagement.model;
 
 import javax.persistence.*;
 
+
 @Entity
 public class Player {
 
@@ -84,13 +85,7 @@ public class Player {
         this.statistics = statistics;
     }
 
-//    public Team getTeams() {
-//        return team;
-//    }
-//
-//    public void setTeams(Team team) {
-//        this.team = team;
-//    }
+
 
     public Team getTeam() {
         return team;

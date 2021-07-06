@@ -22,7 +22,7 @@ public class Statistics {
     @Column(name = "mapAwarness", nullable = false)
     private Integer mapAwarness;
 
-    @OneToOne(mappedBy = "Statistics")
+    @OneToOne(mappedBy = "statistics")
     private Player player;
 
     public Integer getStatisticsId() {
