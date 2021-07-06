@@ -10,9 +10,9 @@ import java.util.Optional;
 public class TeamServiceImpl implements TeamService {
     private TeamRepository teamRepository;
 
-    @Autowired
-    public TeamServiceImpl(TeamRepository teamRepository){
-        this.teamRepository = teamRepository;
+
+    public TeamServiceImpl(){
+
     }
 
     @Override
