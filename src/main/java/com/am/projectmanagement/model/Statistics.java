@@ -23,8 +23,8 @@ public class Statistics {
     @Column(name = "mapAwarness", nullable = false)
     private Integer mapAwarness;
 
-    @OneToOne(mappedBy = "statistics")
-    private Player player;
+//    @OneToOne(mappedBy = "statistics")
+//    private Player player;
 
     public Integer getStatisticsId() {
         return statisticsId;
@@ -82,12 +82,12 @@ public class Statistics {
         this.mapAwarness = mapAwarness;
     }
 
-    public Player getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
-    }
+//    public Player getPlayer() {
+//        return player;
+//    }
+//
+//    public void setPlayer(Player player) {
+//        this.player = player;
+//    }
 
 }
