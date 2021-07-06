@@ -13,9 +13,9 @@ import java.util.Optional;
 public class StatisticsServiceImpl implements StatisticsService{
     private StatisticsRepository statisticsRepository;
 
-    @Autowired
-    public  StatisticsServiceImpl(StatisticsRepository statisticsRepository){
-        this.statisticsRepository=statisticsRepository;
+
+    public  StatisticsServiceImpl(){
+
     }
 
     @Override
@@ -60,4 +60,5 @@ public class StatisticsServiceImpl implements StatisticsService{
         statistics.setPlayer(player);
         statisticsRepository.save(statistics);
     }
+
 }
