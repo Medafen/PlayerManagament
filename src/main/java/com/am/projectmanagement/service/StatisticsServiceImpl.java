@@ -40,8 +40,13 @@ public class StatisticsServiceImpl implements StatisticsService{
 
     @Override
     public List<Statistics> getPlayerStatistics(Player player) {
-        return statisticsRepository.findStatisticsByPlayer(player);
+        return null;
     }
+
+//    @Override
+//    public List<Statistics> getPlayerStatistics(Player player) {
+//        return statisticsRepository.findStatisticsByPlayer(player);
+//    }
 
     @Override
     public Statistics updateStatistics(Statistics statistics) {
