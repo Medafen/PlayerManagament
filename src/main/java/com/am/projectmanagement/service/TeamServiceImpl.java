@@ -3,10 +3,12 @@ package com.am.projectmanagement.service;
 import com.am.projectmanagement.model.Team;
 import com.am.projectmanagement.repository.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public class TeamServiceImpl implements TeamService {
     private TeamRepository teamRepository;
 
