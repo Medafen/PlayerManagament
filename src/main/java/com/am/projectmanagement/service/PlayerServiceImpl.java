@@ -47,7 +47,6 @@ public class PlayerServiceImpl implements PlayerService{
     public Player updatePlayer(Player player) {
         Player updatePlayer = playerRepository.findById(player.getPlayerId()).orElse(null);
         updatePlayer.setElo(player.getElo());
-        updatePlayer.setJungler(player.getJungler());
         updatePlayer.setNickname(player.getNickname());
         updatePlayer.setRole(player.getRole());
         updatePlayer.setStatistics(player.getStatistics());

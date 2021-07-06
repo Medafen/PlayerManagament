@@ -19,8 +19,7 @@ public class Player {
     private String role;
     @Column(name = "elo", nullable = false)
     private Integer elo;
-    @Column(name = "isJungler", nullable = false)
-    private Boolean isJungler;
+
 
     @OneToOne
     @JoinColumn(name = "statistics_id")
@@ -70,13 +69,7 @@ public class Player {
         this.elo = elo;
     }
 
-    public Boolean getJungler() {
-        return isJungler;
-    }
 
-    public void setJungler(Boolean jungler) {
-        isJungler = jungler;
-    }
 
     public Statistics getStatistics() {
         return statistics;
