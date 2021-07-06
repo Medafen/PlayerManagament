@@ -12,5 +12,5 @@ import java.util.List;
 @Repository
 public interface StatisticsRepository extends JpaRepository<Statistics,Integer> {
     @Query("SELECT z FROM Statistics z WHERE z.player = :player")
-    List<Statistics> findStatisticsByPlayer(@Param("team") Player player);
+    List<Statistics> findStatisticsByPlayer(@Param("player") Player player);
 }
