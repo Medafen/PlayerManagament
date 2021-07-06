@@ -14,8 +14,8 @@ public class PlayerServiceImpl implements PlayerService{
     private PlayerRepository playerRepository;
 
 
-    public PlayerServiceImpl(PlayerRepository playerRepository){
-        this.playerRepository = playerRepository;
+    public PlayerServiceImpl(){
+
     }
 
     @Override
