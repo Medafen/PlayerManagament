@@ -15,5 +15,5 @@ public interface StatisticsService {
     List<Statistics> getStatistics();
     List<Statistics> getPlayerStatistics(Player player);
     Statistics updateStatistics(Statistics statistics);
-    void setStatistics(Player player, Statistics statistics);
+   // void setStatistics(Player player, Statistics statistics);
 }

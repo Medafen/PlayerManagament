@@ -55,10 +55,10 @@ public class StatisticsServiceImpl implements StatisticsService{
         return statisticsRepository.save(updateStatistics);
     }
 
-    @Override
-    public void setStatistics(Player player, Statistics statistics) {
-        statistics.setPlayer(player);
-        statisticsRepository.save(statistics);
-    }
+//    @Override
+//    public void setStatistics(Player player, Statistics statistics) {
+//        statistics.setPlayer(player);
+//        statisticsRepository.save(statistics);
+//    }
 
 }
