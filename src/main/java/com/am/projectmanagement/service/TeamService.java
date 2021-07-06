@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+
 public interface TeamService {
     Optional<Team> getTeam(Integer teamId);
     Team addTeam(Team team);
