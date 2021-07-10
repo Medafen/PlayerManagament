@@ -1,5 +1,7 @@
 package com.am.projectmanagement.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 
@@ -19,14 +21,15 @@ public class Player {
     private String role;
     @Column(name = "elo", nullable = false)
     private Integer elo;
-    @Column(name = "isJungler", nullable = false)
-    private Boolean isJungler;
+
 
     @OneToOne
+    @JsonIgnoreProperties({"statistics_id"})
     @JoinColumn(name = "statistics_id")
     private Statistics statistics;
 
     @ManyToOne
+    @JsonIgnoreProperties({"team_id"})
     @JoinColumn(name = "team_id")
     private Team team;
 
@@ -70,13 +73,7 @@ public class Player {
         this.elo = elo;
     }
 
-    public Boolean getJungler() {
-        return isJungler;
-    }
 
-    public void setJungler(Boolean jungler) {
-        isJungler = jungler;
-    }
 
     public Statistics getStatistics() {
         return statistics;

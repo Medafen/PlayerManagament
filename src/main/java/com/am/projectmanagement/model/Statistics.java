@@ -17,14 +17,14 @@ public class Statistics {
     @Column(name = "pathing", nullable = false)
     private Integer pathing;
     @Column(name = "teamFighting", nullable = false)
-    private Integer teamFigting;
+    private Integer teamFighting;
     @Column(name = "roaming", nullable = false)
     private Integer roaming;
     @Column(name = "mapAwarness", nullable = false)
     private Integer mapAwarness;
 
-    @OneToOne(mappedBy = "statistics")
-    private Player player;
+//    @OneToOne(mappedBy = "statistics")
+//    private Player player;
 
     public Integer getStatisticsId() {
         return statisticsId;
@@ -58,12 +58,12 @@ public class Statistics {
         this.pathing = pathing;
     }
 
-    public Integer getTeamFigting() {
-        return teamFigting;
+    public Integer getTeamFighting() {
+        return teamFighting;
     }
 
-    public void setTeamFigting(Integer teamFigting) {
-        this.teamFigting = teamFigting;
+    public void setTeamFighting(Integer teamFigting) {
+        this.teamFighting = teamFigting;
     }
 
     public Integer getRoaming() {
@@ -82,12 +82,12 @@ public class Statistics {
         this.mapAwarness = mapAwarness;
     }
 
-    public Player getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
-    }
+//    public Player getPlayer() {
+//        return player;
+//    }
+//
+//    public void setPlayer(Player player) {
+//        this.player = player;
+//    }
 
 }

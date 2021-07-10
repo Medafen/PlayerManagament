@@ -40,8 +40,13 @@ public class StatisticsServiceImpl implements StatisticsService{
 
     @Override
     public List<Statistics> getPlayerStatistics(Player player) {
-        return statisticsRepository.findStatisticsByPlayer(player);
+        return null;
     }
+
+//    @Override
+//    public List<Statistics> getPlayerStatistics(Player player) {
+//        return statisticsRepository.findStatisticsByPlayer(player);
+//    }
 
     @Override
     public Statistics updateStatistics(Statistics statistics) {
@@ -51,14 +56,14 @@ public class StatisticsServiceImpl implements StatisticsService{
         updateStatistics.setPathing(statistics.getPathing());
         updateStatistics.setRoaming(statistics.getRoaming());
         updateStatistics.setMapAwarness(statistics.getMapAwarness());
-        updateStatistics.setTeamFigting(statistics.getTeamFigting());
+        updateStatistics.setTeamFighting(statistics.getTeamFighting());
         return statisticsRepository.save(updateStatistics);
     }
 
-    @Override
-    public void setStatistics(Player player, Statistics statistics) {
-        statistics.setPlayer(player);
-        statisticsRepository.save(statistics);
-    }
+//    @Override
+//    public void setStatistics(Player player, Statistics statistics) {
+//        statistics.setPlayer(player);
+//        statisticsRepository.save(statistics);
+//    }
 
 }
