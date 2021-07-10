@@ -13,7 +13,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/apiTeams")
+@RequestMapping("/api")
 public class TeamRestController {
     private TeamService teamService;
 
