@@ -1,5 +1,7 @@
 package com.am.projectmanagement.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -15,6 +17,7 @@ public class Team {
     private String teamName;
 
     @OneToMany(mappedBy = "team")
+    @JsonIgnoreProperties({"team"})
     private List<Player> player;
 
     public Integer getTeamId() {
