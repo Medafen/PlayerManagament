@@ -56,7 +56,7 @@ public class StatisticsServiceImpl implements StatisticsService{
         updateStatistics.setPathing(statistics.getPathing());
         updateStatistics.setRoaming(statistics.getRoaming());
         updateStatistics.setMapAwarness(statistics.getMapAwarness());
-        updateStatistics.setTeamFigting(statistics.getTeamFigting());
+        updateStatistics.setTeamFighting(statistics.getTeamFighting());
         return statisticsRepository.save(updateStatistics);
     }
 

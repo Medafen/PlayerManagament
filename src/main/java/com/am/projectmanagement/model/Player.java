@@ -1,5 +1,7 @@
 package com.am.projectmanagement.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 
@@ -22,10 +24,12 @@ public class Player {
 
 
     @OneToOne
+    @JsonIgnoreProperties({"statistics_id"})
     @JoinColumn(name = "statistics_id")
     private Statistics statistics;
 
     @ManyToOne
+    @JsonIgnoreProperties({"team_id"})
     @JoinColumn(name = "team_id")
     private Team team;
 
