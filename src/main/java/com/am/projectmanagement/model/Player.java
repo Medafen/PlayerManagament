@@ -13,6 +13,8 @@ public class Player {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "player_id")
     private Integer playerId;
+    @Column(name = "name", nullable = false)
+    private String name;
     @Column(name = "surname", nullable = false)
     private String surname;
     @Column(name = "nickname", nullable = false)
@@ -39,6 +41,13 @@ public class Player {
 
     public void setPlayerId(Integer playerId) {
         this.playerId = playerId;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getSurname() {

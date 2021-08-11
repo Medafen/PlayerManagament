@@ -50,6 +50,7 @@ public class PlayerServiceImpl implements PlayerService{
         updatePlayer.setNickname(player.getNickname());
         updatePlayer.setRole(player.getRole());
         updatePlayer.setStatistics(player.getStatistics());
+        updatePlayer.setName(player.getName());
         updatePlayer.setSurname(player.getSurname());
         updatePlayer.setStatistics(player.getStatistics());
         updatePlayer.setTeam(player.getTeam());
